@@ -2,6 +2,7 @@
 using namespace std;
 
 //node definition 
+// dummy comment
 struct node{
     int data;
     struct node* left;
