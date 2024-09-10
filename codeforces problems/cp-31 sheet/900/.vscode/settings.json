@@ -1,0 +1,25 @@
+{
+    "files.associations": {
+        "random": "cpp",
+        "valarray": "cpp",
+        "chrono": "cpp",
+        "limits": "cpp",
+        "ostream": "cpp",
+        "bitset": "cpp",
+        "algorithm": "cpp"
+    },
+
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/*.exe": true
+    },
+
+    "search.exclude":{
+        "**/*.exe": true
+    }
+}
