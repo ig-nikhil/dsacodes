@@ -12,15 +12,20 @@ void solve(){
         v.push_back(temp);  
     }
 
-    int ans = abs(v[0]-1);
+    int cnt = 0;
+
+
     for(int i=1; i<n; i++){
-        ans = __gcd(ans,abs(v[i]-(i+1)));
+        if(v[i] == v[i-1]){
+            if(v[n-i-1] != v[i] && (v[n-i] != v[i] || v[n-i-2] != v[i]) ){
+                swap(v[i],v[n-i-1]);
+            }
+            else{
+                cnt++;
+            }
+        }
     }
-
-    cout<<ans<<endl;
-    
-
-
+    cout<<cnt<<endl;
      
 }
 

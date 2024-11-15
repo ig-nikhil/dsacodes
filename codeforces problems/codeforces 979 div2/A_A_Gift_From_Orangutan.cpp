@@ -12,15 +12,10 @@ void solve(){
         v.push_back(temp);  
     }
 
-    int ans = abs(v[0]-1);
-    for(int i=1; i<n; i++){
-        ans = __gcd(ans,abs(v[i]-(i+1)));
-    }
+    int mini = *min_element(v.begin(),v.end());
+    int maxi = *max_element(v.begin(),v.end());
 
-    cout<<ans<<endl;
-    
-
-
+    cout<<((n-1)*(maxi-mini))<<endl;
      
 }
 

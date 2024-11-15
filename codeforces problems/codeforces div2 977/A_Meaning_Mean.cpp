@@ -10,17 +10,21 @@ void solve(){
         int temp;
         cin>>temp;
         v.push_back(temp);  
-    }
+    } 
 
-    int ans = abs(v[0]-1);
+    sort(v.begin(),v.end());
+
+    int sum = v[0];
+
     for(int i=1; i<n; i++){
-        ans = __gcd(ans,abs(v[i]-(i+1)));
+        sum = (sum + v[i]) / 2;
     }
 
-    cout<<ans<<endl;
+
+
+    cout<<(sum)<<endl;
+
     
-
-
      
 }
 

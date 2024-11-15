@@ -9,18 +9,24 @@ void solve(){
     for(int i=0; i<n; i++){
         int temp;
         cin>>temp;
-        v.push_back(temp);  
+        v.push_back(temp+1);  
+    } 
+
+    for(int i=0; i<n-1; i++){
+        if(v[i+1] % v[i] == 0){
+          
+                v[i+1]++;
+    
+         
+        }
     }
 
-    int ans = abs(v[0]-1);
-    for(int i=1; i<n; i++){
-        ans = __gcd(ans,abs(v[i]-(i+1)));
-    }
-
-    cout<<ans<<endl;
     
 
-
+    for(auto i:v){
+        cout<<i<<" ";
+    }
+    cout<<endl;
      
 }
 

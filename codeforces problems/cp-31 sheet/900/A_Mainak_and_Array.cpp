@@ -12,15 +12,22 @@ void solve(){
         v.push_back(temp);  
     }
 
-    int ans = abs(v[0]-1);
-    for(int i=1; i<n; i++){
-        ans = __gcd(ans,abs(v[i]-(i+1)));
-    }
+    auto maxidx = max_element(v.begin(),v.end());
+    int maxi = *maxidx;
 
-    cout<<ans<<endl;
+    auto minidx = min_element(v.begin(),v.end());
+    int mini = *minidx;
+
+    int ans = max(maxi-v[0],v[n-1]-mini);
+
+    for(int i=1; i<n; i++){
+        if(v[i-1]-v[i] > ans){
+            ans = v[i-1]-v[i];
+        }
+    }
     
 
-
+    cout<<ans<<endl;
      
 }
 

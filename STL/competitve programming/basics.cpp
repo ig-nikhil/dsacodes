@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define int long long
+const int mod = 1e9 + 7;
 
 void solve(){
     int n;
@@ -10,23 +12,15 @@ void solve(){
         int temp;
         cin>>temp;
         v.push_back(temp);  
-    }
-
-    int ans = abs(v[0]-1);
-    for(int i=1; i<n; i++){
-        ans = __gcd(ans,abs(v[i]-(i+1)));
-    }
-
-    cout<<ans<<endl;
-    
-
-
+    } 
      
 }
 
 
-int main()
+signed main()
 {   
+ios::sync_with_stdio(false);
+cin.tie(0);
     int t;
     cin>>t;
     
